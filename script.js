@@ -86,8 +86,11 @@ const Cars = [
     },
 ]
 
+const PropertiesStrings = ['Brand', 'Model', 'Color']
+
 // console.log(SearchCarsByBrand(Cars, 'Fiat'))
-console.log(ViewCarsAvailable(Cars))
+// console.log(ViewCarsAvailable(Cars))
+console.log(ShowProperties(Cars, PropertiesStrings))
 
 function SearchCarsByBrand(array, brand){
     return array.filter((item) => item.Brand === brand)
@@ -96,8 +99,47 @@ function SearchCarsByBrand(array, brand){
 function ViewCarsAvailable(array){
     let ListOfCarsAvailable = []
     array.forEach((item) => {
-        array.every(x => ListOfCarsAvailable.includes(x.Brand) === false) && (ListOfCarsAvailable.push(item.Brand))
+        const verificateListOfCars =  array.every(x => ListOfCarsAvailable.includes(x.Brand))
+        verificateListOfCars === false && (ListOfCarsAvailable.push(item.Brand))
     })
 
     return ListOfCarsAvailable
+}
+
+function ShowProperties(array, arrayStrings){
+    let ListOfCarsProperties = []
+
+    array.forEach((item) => {
+        let newObject = {}
+        arrayStrings.forEach((string) => {
+            switch(string){
+                case 'Brand':
+                const Brand = item[string]
+                newObject.Brand = Brand
+                break;
+
+                case 'Model':
+                const Model = item[string]
+                newObject.Model = Model
+                break;
+
+                case 'Year':
+                const Year = item[string]
+                newObject.Year = Year
+                break;
+
+                case 'Value':
+                const Value = item[string]
+                newObject.Value = Value
+                break;
+
+                case 'Color':
+                const Color = item[string]
+                newObject.Color = Color
+                break;
+            }
+        })
+        ListOfCarsProperties.push(newObject)
+    })
+    return ListOfCarsProperties
 }
