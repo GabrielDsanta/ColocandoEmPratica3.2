@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro De Carros</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main> 
+        <form action="#">
+
+            <label for="brand">Marca</label>
+            <div>
+                <input id="brand" placeholder="Ex: Honda" type="text">
+            </div>
+
+            <label for="model">Modelo</label>
+            <div>
+                <input id="model" placeholder="Ex: Civic" type="text">
+            </div>
+
+            <label for="year">Ano</label>
+            <div>
+                <input id="year" placeholder="Ex: 2022" type="text">
+            </div>
+
+            <label for="value">Valor</label>
+            <div>
+                <input id="value" placeholder="Ex: 100000" type="text">
+            </div>
+
+            <label for="color">Cor</label>
+            <div>
+                <input id="color" placeholder="Ex: Vermelho" type="text">
+            </div>
+
+            <label for="color">Automático</label>
+           <div class="radioInputConteiner">
+                <div>
+                    <h4>Sim</h4>
+                <input id="automatic" value="Sim" name="automatic" type="radio">
+                </div>
+
+                <div>
+                    <h4>Não</h4>
+                    <input id="automatic" value="Não" name="automatic" type="radio">
+                </div>
+           </div>
+
+            <div class="ConteinerBtn">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
